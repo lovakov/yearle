@@ -583,7 +583,27 @@ export default function Yearle(){
         {screen === "start" && (
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flex: 1, gap: "8px" }}>
             <h1 style={S.title}>Yearle</h1>
-            <p style={S.subtitle}>Угадай исторический год по подсказкам</p>
+            <p style={S.subtitle}>Угадай год по историческим событиям</p>
+            <div style={{ width: "100%", background: "#fff", borderRadius: "16px", padding: "18px 20px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", boxSizing: "border-box", marginBottom: "16px" }}>
+              <p style={{ fontSize: "14px", color: "#374151", lineHeight: 1.7, margin: 0 }}>
+                Каждый день загадывается новый год. У вас <b>4 попытки</b> его угадать. С каждой попыткой появляется новая подсказка — историческое событие того года.
+              </p>
+              <p style={{ fontSize: "13px", color: "#6B7280", lineHeight: 1.7, margin: "12px 0 0 0" }}>
+                После ввода года каждая цифра подсвечивается:
+              </p>
+              <div style={{ display: "flex", gap: "8px", marginTop: "10px", alignItems: "center" }}>
+                <div style={{ ...S.digitCell("green"), width: "36px", height: "40px", fontSize: "17px" }}>1</div>
+                <span style={{ fontSize: "13px", color: "#374151" }}>— цифра есть и стоит на верном месте</span>
+              </div>
+              <div style={{ display: "flex", gap: "8px", marginTop: "6px", alignItems: "center" }}>
+                <div style={{ ...S.digitCell("orange"), width: "36px", height: "40px", fontSize: "17px" }}>2</div>
+                <span style={{ fontSize: "13px", color: "#374151" }}>— цифра есть, но стоит не на своём месте</span>
+              </div>
+              <div style={{ display: "flex", gap: "8px", marginTop: "6px", alignItems: "center" }}>
+                <div style={{ ...S.digitCell("red"), width: "36px", height: "40px", fontSize: "17px" }}>3</div>
+                <span style={{ fontSize: "13px", color: "#374151" }}>— такой цифры в загаданном году нет</span>
+              </div>
+            </div>
             <p style={S.dayBadge}>ДЕНЬ #{dayNumber + 1}</p>
             <button style={S.startBtn} onClick={startGame} onMouseEnter={hi} onMouseLeave={ho}>Старт</button>
           </div>
