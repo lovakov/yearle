@@ -1,0 +1,18 @@
+# dependencies
+node_modules
+
+# build output
+dist
+
+# local env / editor / OS
+.env
+.env.local
+*.local
+.DS_Store
+
+# vercel
+.vercel
+
+# logs
+npm-debug.log*
+yarn-error.log*
