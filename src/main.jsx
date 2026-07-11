@@ -1,9 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import Yearle from './Yearle.jsx'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Yearle />
-  </React.StrictMode>
-)
+createRoot(document.getElementById('root')).render(<Yearle />)
